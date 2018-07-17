@@ -37,7 +37,8 @@
                         }
                        if (userGuess !== compGuess){
                             guessCount --;
-                            userSelection = userSelection + event.key + ',' ;
+                            userSelection =  userSelection + "," + event.key;
+                            userSelection = userSelection.replace(/^,/,'');
                         }
                     
 
