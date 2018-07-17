@@ -8,89 +8,13 @@
     <title>The Pyschic Game</title>
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/javascript/game.js">
+    <script src="assets/javascript/game.js"></script>
 </head>
 
 <body>
-    <div id="game">
-        <h1>The Pyschic Game</h1>
-        <br>
-        <p>Guess what letter I'm thinking of</p>
-        <br>
-        <p>Wins: </p>
-        <p>Losses: </p>
-        <p>Guesses Left: </p>
-        <p>Your Guesses so far: </p>
-    </div>
+    <div id="game"> </div>
 
-    <script type="text/javascript">
-        var letters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-
-        var wins = 0;
-        var losses = 0;
-        var userGuesses = 9;
-        var userSelection = [];
-        var randomletter;
-
-        function random() {
-            randomLetter = letters[Math.floor(Math.random() * letters.length)];
-            console.log(randomLetter);
-            return randomLetter;
-
-        }
-        randomLetter = random();
-
-
-        document.onkeyup = function (event) {
-
-            var guess = event.key.toLowercase();
-            var userGuess = randomLetter
-
-            var guessOptions = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
-
-
-            
-                
-                 if (guess !== randomletter){
-                    userGuesses--;
-                    userSelection = userSelection + event.key(" , ");
-
-                }
-               
-               
-                else if (guess === randomletter) {
-                    wins++;
-                    userGuesses = 9;
-                    userSelection = [];
-
-                }
-
-            
-
-                if (userGuesses === 0) {
-                    userGuesses = 9;
-                    losses++;
-                    userSelection = [];
-
-                }
-
-                var html =
-                    "<h1> The Psychic Game </h1>" +
-                    "<p> Guess what letter I'm thinking of </p>" +
-                    "<p> Wins: " + wins + "</p>" +
-                    "<p> Losses: " + losses + "</p>" +
-                    "<p> Guesses Left: " + userGuesses + "</p>" +
-                    "<p> Your Guesses so far: " + userSelection + "</p>";
-
-                document.querySelector("#game").innerHTML = html;
-            }
-
-
-
-        ;
-
-
-    </script>
+   
 
 </body>
 

@@ -1,0 +1,16 @@
+body {
+    background: url(../images/blue.jpg)repeat;
+    position: relative;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+p {
+    font-size: 18px;
+    color: white;
+}
+
