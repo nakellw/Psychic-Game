@@ -18,8 +18,8 @@
 
         document.onkeyup = function (event) {
 
-            var userGuess = event.key;
-            var compGuess = randomletter;
+            var userGuess = event.key.toLowerCase();
+            var compGuess = randomLetter;
             console.log(compGuess);
 
             var guessOptions = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
@@ -37,7 +37,7 @@
                         }
                        if (userGuess !== compGuess){
                             guessCount --;
-                            userSelection = userSelection + event.key ;
+                            userSelection = userSelection + event.key + ',' ;
                         }
                     
 
