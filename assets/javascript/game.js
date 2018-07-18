@@ -26,7 +26,7 @@
 
 
             
-                if (guessOptions.indexOf(userGuess) > -1){ 
+                if (guessOptions.indexOf(userGuess) > -1 && (userSelection.indexOf(userGuess) === -1) ){ 
                         
                        
                          if (userGuess === compGuess) {
